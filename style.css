@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Big+Shoulders:opsz@10..72&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+:root{
+     --Gray_950: hsl(0, 0%, 17%);
+    --Gray_400: hsl(0, 0%, 58%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+     font-family: "Rubik", sans-serif;
+}
+body{
+    width: 100%;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Data{
+    width: 100%;
+    background-image: url("./images/pattern-bg-desktop.png");
+    height: 36vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    padding-top: 1rem;
+}
+.search{
+    padding-top: 1rem;
+    display: flex;
+}
+#ipInput{
+    width: 34vw;
+    padding: 0.8rem;
+    border-radius: 10px 0 0 10px ;
+}
+#btn{
+    width: 5vw;
+    padding: 0.8rem;
+    border-radius:  0 10px 10px 0 ;
+    background: #000;
+    color: white;
+    font-weight: 700;
+}
+#ViewData{
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    top: 17%;
+    z-index: 3;
+}
+ul {
+    display: flex; 
+    /* justify-content: space-evenly; */
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    justify-content: center;
+    flex: auto;
+    /* 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    font-size: 1vw;
+    font-weight: 600;
+    color: var(--Gray_400);
+    padding: 1rem;
+    /* padding-left: 0; */
+}
+
+ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80%;
+  background-color: var(--Gray_950);
+}
+.data{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+#map 
+{
+    width: 100%;
+    height: 64vh; 
+     display: block;
+     z-index: 0;
+}
+
+@media (max-width:500px) {
+ #Data{
+    background-image: url("./images/pattern-bg-mobile.png");
+    height: 38vh;
+    background-repeat: no-repeat;
+    padding-top: 0.5rem ;
+}
+.search{
+    padding: 0 0 3.5rem;
+    display: flex;
+}
+#ipInput{
+    width: 66vw;
+    padding: 0.8rem;
+    border-radius: 10px 0 0 10px ;
+}
+#btn{
+    width: 13vw;
+    padding: 0.8rem;
+    border-radius:  0 10px 10px 0 ;
+    background: #000;
+    color: white;
+    font-weight: 700;
+}
+#ViewData{
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    position: fixed;
+    top: 26%;
+    z-index: 3;
+}
+ul {
+    display: flex; 
+    flex-direction: column;   
+    align-items: center;
+    list-style-type: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+ul li {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    justify-content: center;
+    flex: auto;
+    padding: 0;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 600;
+    color: var(--Gray_400);
+}
+
+ul li:not(:last-child)::after {
+  content: "";
+  width: 0;
+  height: 0%;;
+}
+.data{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#map 
+{
+    width: 100%;
+    height: 62vh; 
+    display: block;
+    z-index: 0;
+}   
+}

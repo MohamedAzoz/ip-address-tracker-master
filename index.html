@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet"  href="style.css">
+     <title>Frontend Mentor | IP Address Tracker</title>
+
+</head>
+<body>
+<main>
+
+<div id="Data">
+    <h3 class="text-light">IP Address Tracker</h3>
+
+    <div class="search">
+        <input type="text" id="ipInput" placeholder="Search for any IP address or domain">
+        <button id="btn">></button>
+    </div>
+
+   <div id="ViewData">
+    <ul>
+      <li>
+          <p >IP Address</p>
+          <h3 id="IP" class="text-dark data">192.212.174.101</h3>
+      </li>
+      <li>
+          <p>Location</p>
+          <h3 id="Location" class="text-dark data">Brooklyn, NY 10001</h3>
+      </li>
+      <li>
+          <p>Timezone</p>
+          <h3 id="Timezone" class="text-dark data">UTC -05:00</h3>
+      </li>
+      <li>
+          <p>ISP</p>
+          <h3 id="ISP" class="text-dark data">SpaceX Starlink</h3>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div id="map"></div>
+
+
+</main>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="main.js"></script>
+<script>
+    
+</script>
+</body>
+</html>
